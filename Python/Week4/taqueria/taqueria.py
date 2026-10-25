@@ -9,13 +9,16 @@ menu = {
     "Taco": 3.00,
     "Tortilla Salad": 8.00
 }
+for
 total = 0
 while True:
     item = input('Item: ')
     item = item.lower()
     try:
         total += menu[item]
-        print(f"Total: ${total}")
+
     except KeyError:
         pass
+    else:
+        print(f"Total: ${total}")
 
