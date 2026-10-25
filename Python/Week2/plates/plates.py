@@ -19,7 +19,7 @@ def is_valid(s):
             break
     if first_num == 0:
         return False
-    if char in ', ./!?':
+    if s in ', ./!?':
         return False
     return True
 
