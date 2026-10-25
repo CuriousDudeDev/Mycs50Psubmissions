@@ -1,0 +1,9 @@
+fruits = ['apple' , 'avocado' , 'banana' , 'cantaloupe' , 'grapefruit' , 'grapes' , 'honeydew melon' , 'kiwifruit' , 'lemon' , 'lime' , 'nectarine' , 'orange' , 'peach' , 'pear' , 'plums' , 'strawberries' , 'sweet cherries' , 'tangerine' , 'watermelon']
+calories = [130 , 50 , 110 , 50 , 60 , 90 , 50 , 90 , 15 , 20 , 60 , 80 , 60 , 100 , 50 , 70 , 50 , 100 , 50 , 80]
+fruit = input('Item: ')
+if fruit.lower() in fruits:
+    calorie = calories[fruits.index(fruit.lower())]
+else:
+    calories = None
+print(calorie)
+
