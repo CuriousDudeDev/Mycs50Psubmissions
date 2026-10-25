@@ -19,6 +19,10 @@ def is_valid(s):
             break
     if first_num == 0:
         return False
+    puncts = ['' , '.' , '/' , '-' , '_']
+    for i in s:
+        if i in puncts:
+            return False
 
     return True
 
