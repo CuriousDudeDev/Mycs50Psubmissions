@@ -1,14 +1,22 @@
 def main():
     time = input('Enter the current time: ')
-    format = input('choose 1 for 12hr format')
+    time = convert(time)
+    print(time)
+    if 7 <= time <= 8:
+        print('Breakfast time')
+    elif 12 <= time <= 13:
+        print('Lunch Time')
+    elif 18 <= time <= 19:
+        print('Dinner time')
 
 
 def convert(time):
     hours_and_mins = time.split(':')
     hours = int(hours_and_mins[0])
-    if 
-
-    minutes = float((hours_and_mins[1])/60)
+    if time[3]:
+        if time[3] == 'pm':
+            hours += 12
+    minutes = float(int(hours_and_mins[1])/60)
     total = hours + minutes
     return total
 
