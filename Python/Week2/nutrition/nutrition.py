@@ -4,6 +4,6 @@ fruit = input('Item: ')
 if fruit.lower() in fruits:
     calorie = calories[fruits.index(fruit.lower())]
 else:
-    calories = None
+    calorie = None
 print(calorie)
 
