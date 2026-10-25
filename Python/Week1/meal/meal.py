@@ -13,8 +13,8 @@ def main():
 def convert(time):
     hours_and_mins = time.split(':')
     hours = int(hours_and_mins[0])
-    if time[3]:
-        if time[3] == 'pm':
+    if time[2]:
+        if time[2] == 'pm':
             hours += 12
     minutes = float(int(hours_and_mins[1])/60)
     total = hours + minutes
