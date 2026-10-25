@@ -16,8 +16,11 @@ while True:
             percent = round(num1/num2 * 100)
             if percent <= 1:
                 print('E')
+                break
             elif percent >= 99:
                 print('F')
+                break
             else:
                 print(str(percent)+ '%')
+                break
 
