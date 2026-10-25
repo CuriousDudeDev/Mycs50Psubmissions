@@ -1,5 +1,8 @@
 list_items = {}
 while True:
     item = input()
-    list[item.upper().strip()] += 1 if list[item.upper().strip()] else = 0
-
+    item.upper().strip()
+    if list_items[item]:
+        list_items[item] += 1
+    else:
+        
