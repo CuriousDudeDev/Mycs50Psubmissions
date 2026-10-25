@@ -12,8 +12,9 @@ menu = {
 total = 0
 while True:
     item = input('Item: ')
+    item = item.lower()
     try:
-        total += menu[item.lower()]
+        total += menu[item]
         print(f"Total: ${total}")
     except KeyError:
         pass
