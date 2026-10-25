@@ -1,7 +1,6 @@
 def main():
     time = input('Enter the current time: ')
-    time = convert(time)
-    print(time)
+    time = int(convert(time))
     if 7 <= time <= 8:
         print('Breakfast time')
     elif 12 <= time <= 13:
@@ -21,7 +20,7 @@ def convert(time):
         return 'Invalid format'
     minutes = float(int(hours_and_mins[1])/60)
     total = hours + minutes
-    return total
+    return (total)
 
 
 
