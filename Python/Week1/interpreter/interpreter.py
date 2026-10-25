@@ -1,7 +1,7 @@
 expression = input('Enter the expression: ')
 expression.strip()
 signs = ['+' , '-' , '*' , '/']
-for i in range(len(expression)):
+for i in expression:
     if i in signs:
         sign = i
         break
