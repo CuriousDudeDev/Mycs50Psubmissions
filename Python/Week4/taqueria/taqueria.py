@@ -14,8 +14,11 @@ for key , value in menu.items():
     final_menu[key.lower()] = value
 total = 0
 while True:
-    item = input('Item: ')
-    item = item.lower()
+    try:
+        item = input('Item: ')
+        item = item.lower()
+    except EOFError:
+        pass
     try:
         total += final_menu[item]
 
