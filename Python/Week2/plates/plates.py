@@ -13,6 +13,14 @@ def is_valid(s):
         return False
     if not (s[-1].isdigit()):
         return False
+    total_nums = 0
+    for i in s:
+        if i.isdigit():
+            total_nums += 1
+    if total_nums > 1:
+        for j in range((0-total_nums) , -1):
+            if not j.isdigit():
+                return False
     for i in s:
         if i.isdigit():
             first_num = int(i)
