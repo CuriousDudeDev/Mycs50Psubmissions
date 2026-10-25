@@ -25,5 +25,5 @@ while True:
     except KeyError:
         pass
     else:
-        print(f"Total: ${total}")
+        print(f"Total: ${total..2f}")
 
