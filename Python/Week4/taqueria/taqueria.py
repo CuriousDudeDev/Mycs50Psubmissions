@@ -9,13 +9,15 @@ menu = {
     "Taco": 3.00,
     "Tortilla Salad": 8.00
 }
-for
+final_menu = {}
+for key , value in menu.items():
+    final_menu[key.lower()] = value
 total = 0
 while True:
     item = input('Item: ')
     item = item.lower()
     try:
-        total += menu[item]
+        total += final_menu[item]
 
     except KeyError:
         pass
