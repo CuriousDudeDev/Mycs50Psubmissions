@@ -13,6 +13,11 @@ while True:
         if num1 > num2:
             pass
         else:
-            print(str(num1/num2*100)+'%')
+            if num1/num2 == 1:
+                print('F')
+            if num1/num2 == 0:
+                print('E')
+            else:
+                print(str(num1/num2*100)+'%')
 
 
