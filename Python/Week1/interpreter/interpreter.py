@@ -8,5 +8,5 @@ for i in expression:
 nums = expression.split(sign)
 num1 = nums[0]
 num2 = nums[1]
-print(int(num1)*int(num2) if sign == '*' else int(num1)+int(num2) if sign =='+' else int(num1)/int(num2) if sign == '/' else int(num1)-int(num2) if sign =='-' else () )
+print(float(num1)*float(num2) if sign == '*' else float(num1)+float(num2) if sign =='+' else float(num1)/float(num2) if sign == '/' else float(num1)-float(num2) if sign =='-' else () )
 
