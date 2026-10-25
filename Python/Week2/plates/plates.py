@@ -19,7 +19,7 @@ def is_valid(s):
             total_nums += 1
     if total_nums > 1:
         for j in range((0-total_nums) , -1):
-            if not j.isdigit():
+            if not s[j].isdigit():
                 return False
     for i in s:
         if i.isdigit():
