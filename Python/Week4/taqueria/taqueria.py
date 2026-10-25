@@ -18,7 +18,7 @@ while True:
         item = input('Item: ')
         item = item.lower()
     except EOFError:
-        pass
+        break
     try:
         total += final_menu[item]
 
