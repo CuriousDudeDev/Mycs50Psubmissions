@@ -3,7 +3,7 @@ calories = [130 , 50 , 110 , 50 , 60 , 90 , 50 , 90 , 15 , 20 , 60 , 80 , 60 , 1
 fruit = input('Item: ')
 if fruit.lower() in fruits:
     calorie = calories[fruits.index(fruit.lower())]
+    print(calorie)
 else:
-    calorie = None
-print(calorie)
+    print()
 
