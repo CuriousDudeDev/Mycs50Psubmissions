@@ -10,16 +10,10 @@ while True:
     except ValueError:
         pass
     else:
-        if num1 > num2:
+        if num1 > num2 or num1 < 0:
             pass
         else:
-            if num1/num2 == 1:
-                print('F')
-                break
-            elif num1/num2 == 0:
-                print('E')
-                break
-            else:
-                print(str(int(num1/num2*100))+'%')
-                break
+            percent = round(num1/num2 * 100)
+            if percent <= 1:
+                
 
