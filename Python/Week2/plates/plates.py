@@ -19,6 +19,7 @@ def is_valid(s):
         for j in range((0-total_nums) , -1):
             if not s[j].isdigit():
                 return False
+    first_num = ''
     for i in s:
         if i.isdigit():
             first_num = int(i)
