@@ -14,10 +14,6 @@ def convert(time):
     hours = int(hours_and_mins[0])
     if time.endswith('pm'):
         hours += 12
-    elif time.endswith('am'):
-        pass
-    else:
-        return 'Invalid format'
     minutes = float(int(hours_and_mins[1])/60)
     total = hours + minutes
     return total
