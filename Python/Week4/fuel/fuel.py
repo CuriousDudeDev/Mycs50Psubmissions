@@ -15,9 +15,11 @@ while True:
         else:
             if num1/num2 == 1:
                 print('F')
-            if num1/num2 == 0:
+                break
+            elif num1/num2 == 0:
                 print('E')
+                break
             else:
-                print(str(num1/num2*100)+'%')
-
+                print(str(int(num1/num2*100))+'%')
+                break
 
