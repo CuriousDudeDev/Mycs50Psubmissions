@@ -1,4 +1,5 @@
-camelCase = input('camelCase')
+camelCase = input('camelCase: ')
 snake_case = ''
 for i in camelCase:
-    snake_case.append(i) if i.islower() else snake_case.append(f' {i.lower()}') if i.isupper()
+    snake_case += (i) if i.islower() else (f'_{i.lower()}') if i.isupper() else ''
+print(f'snake_case: {snake_case}')
