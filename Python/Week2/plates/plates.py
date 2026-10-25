@@ -11,8 +11,6 @@ def is_valid(s):
             return False
     if not (s[0].isalpha() and s[1].isalpha()):
         return False
-    if not (s[-1].isdigit()):
-        return False
     total_nums = 0
     for i in s:
         if i.isdigit():
