@@ -15,10 +15,13 @@ def is_valid(s):
     for i in s:
         if i.isdigit():
             total_nums += 1
-    if total_nums > 1:
+    if total_nums >= 1:
         for j in range((0-total_nums) , -1):
             if not s[j].isdigit():
                 return False
+    if total_nums == 1:
+        if not s[-1].isdigit():
+            return False
     first_num = ''
     for i in s:
         if i.isdigit():
@@ -26,7 +29,7 @@ def is_valid(s):
             break
     if first_num == 0:
         return False
-    puncts = ['' , '.' , '/' , '-' , '_']
+    puncts = [' ' , '.' , '/' , '-' , '_']
     for i in s:
         if i in puncts:
             return False
