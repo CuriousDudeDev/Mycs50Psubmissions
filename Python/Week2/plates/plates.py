@@ -7,7 +7,10 @@ def main():
 
 
 def is_valid(s):
-    if s[0] isalpha() and s[1] is alpha():
+    if not (s[0] isalpha() and s[1] is alpha()):
+        return False
+    if len(s) > 6 or len(s) < 2:
+        return False
 
 
 main()
