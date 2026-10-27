@@ -23,7 +23,7 @@ def get_level():
 def generate_integer(level):
     score = 0
     num = 0
-    while num <= 10:
+    while num <= 2:
         int1 = r(10*level , 10*(level+1))
         int2 = r(10*level , 10*(level+1))
         answer = int1 + int2
@@ -33,7 +33,7 @@ def generate_integer(level):
                 print('EEE')
                 break
             try:
-                answer_given = int(input(f'{int1} + {int2}'))
+                answer_given = int(input(f'{int1} + {int2} = '))
             except ValueError:
                 attempts += 1
                 continue
@@ -43,6 +43,7 @@ def generate_integer(level):
                     break
                 else:
                     attempts += 1
+    return score
 
 
 
