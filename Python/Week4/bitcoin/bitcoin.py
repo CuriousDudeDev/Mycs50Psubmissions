@@ -12,3 +12,7 @@ else:
     else:
         try:
             response = requests.get(" rest.coincap.io/v3/assets/bitcoin?apiKey=442416a3583537eedb59226e3addccb1314e8c20df178b16088c884be02a4bdc")
+        except requests.RequestException:
+            exit('Error! Here!, Wait a minute or try again .')
+        else:
+            
