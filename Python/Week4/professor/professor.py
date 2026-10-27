@@ -30,8 +30,8 @@ def generate_integer(level):
     while num < 10 :
         int1 = r(nums)
         int2 = r(nums)
-        nums -= int1
-        nums -= int2
+        nums.remove(int1)
+        nums.remove(int2)
         answer = int1 + int2
         attempts = 0
         while True:
