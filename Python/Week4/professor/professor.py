@@ -7,21 +7,21 @@ def main():
     score = 0
     num = 0
     while num < 10 :
-        ints = generate_integer(level)
-        int1 = ints[0]
-        int2 = ints[1]
+
+        int1 = generate_integer(level)
+        int2 = generate_integer(level)
         answer = int1 + int2
         attempts = 0
         while True:
             if attempts == 3:
                 print(f'{int1} + {int2} = {answer}')
-                print('EEE')
                 num += 1
                 break
             try:
                 answer_given = int(input(f'{int1} + {int2} = '))
             except ValueError:
                 attempts += 1
+                print('EEE')
                 continue
             else:
                 if answer_given == answer:
@@ -30,7 +30,8 @@ def main():
                     break
                 else:
                     attempts += 1
-    return f'Score: {score}'
+                    print('EEE')
+    print(f'Score: {score}')
 
 
 def get_level():
@@ -50,12 +51,12 @@ def get_level():
 def generate_integer(level):
     ints=[0 , 0]
     if level > 1:
-        ints[0] = r(10**(level-1) , 10**(level))
-        ints[1] = r(10**(level-1) , 10**(level))
+        ints = r(10**(level-1) , 10**(level))
+        ints = r(10**(level-1) , 10**(level))
     else:
-        ints[0] = r(0 , 10**(level))
-        ints[1] = r(0 , 10**(level))
-    return ints
+        ints = r(0 , 10**(level))
+        ints = r(0 , 10**(level))
+
 
 
 
