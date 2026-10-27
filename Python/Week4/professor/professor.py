@@ -1,4 +1,4 @@
-from random import randrange as r
+from random import randchoice as r
 
 
 def main():
@@ -23,13 +23,15 @@ def get_level():
 def generate_integer(level):
     score = 0
     num = 0
+    if level > 1:
+        nums = list(range(10**(level-1) , 10**(level)))
+    else:
+        nums = list(range(0 , 10**level))
     while num < 10 :
-        if level > 1:
-            int1 = r(10**(level-1) , 10**(level))
-            int2 = r(10**(level-1) , 10**(level))
-        else:
-            int1 = r(0 , 10**(level))
-            int2 = r(0 , 10**(level))
+        int1 = r(nums)
+        int2 = r(nums)
+        nums -= int1
+        nums -= int2
         answer = int1 + int2
         attempts = 0
         while True:
