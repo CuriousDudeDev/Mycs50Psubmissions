@@ -3,7 +3,7 @@ from random import randint as r
 
 def main():
     level = get_level()
-    generate_integer(level)
+    print(generate_integer(level))
 
 
 def get_level():
@@ -23,7 +23,7 @@ def get_level():
 def generate_integer(level):
     score = 0
     num = 0
-    while num <= 2:
+    while num <= 3:
         int1 = r(10*level , 10*(level+1))
         int2 = r(10*level , 10*(level+1))
         answer = int1 + int2
@@ -40,6 +40,7 @@ def generate_integer(level):
             else:
                 if answer_given == answer:
                     score += 1
+                    num += 1
                     break
                 else:
                     attempts += 1
