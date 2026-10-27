@@ -1,5 +1,5 @@
 from emoji import emojize
 
 original = input('Input: ')
-new = emojize(original)
+new = emojize(original , language = 'alias')
 print(new)
