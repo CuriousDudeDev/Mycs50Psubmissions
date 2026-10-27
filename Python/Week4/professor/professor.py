@@ -44,7 +44,7 @@ def generate_integer(level):
                     break
                 else:
                     attempts += 1
-    return score
+    return f'Score: {score}'
 
 
 
