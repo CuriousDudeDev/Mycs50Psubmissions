@@ -16,5 +16,7 @@ else:
             exit('Error! Here!, Wait a minute or try again .')
         else:
             dump = response.json()
-            price = dump['priceUsd']
+            if dump ['message']:
+            print(dump)
+            price = dump['Data']['priceUsd']
             print(price)
