@@ -1,4 +1,4 @@
-from random import randchoice as r
+from random import choice as r
 
 
 def main():
