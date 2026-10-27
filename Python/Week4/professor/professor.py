@@ -36,6 +36,7 @@ def generate_integer(level):
             if attempts == 3:
                 print(f'{int1} + {int2} = {answer}')
                 print('EEE')
+                num += 1
                 break
             try:
                 answer_given = int(input(f'{int1} + {int2} = '))
