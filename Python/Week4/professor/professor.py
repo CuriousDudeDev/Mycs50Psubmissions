@@ -49,13 +49,13 @@ def get_level():
 
 
 def generate_integer(level):
-    ints=[0 , 0]
+
     if level > 1:
-        ints = r(10**(level-1) , 10**(level))
-        ints = r(10**(level-1) , 10**(level))
+        num = r(10**(level-1) , 10**(level))
+
     else:
-        ints = r(0 , 10**(level))
-        ints = r(0 , 10**(level))
+        num = r(0 , 10**(level))
+    return num
 
 
 
