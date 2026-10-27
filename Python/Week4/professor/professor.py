@@ -3,7 +3,7 @@ from random import randint as r
 
 def main():
     level = get_level()
-    generate_integer
+    generate_integer(level)
 
 
 def get_level():
