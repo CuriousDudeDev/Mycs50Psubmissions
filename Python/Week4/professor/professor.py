@@ -1,4 +1,4 @@
-from random import randint as r
+from random import randrange as r
 
 
 def main():
