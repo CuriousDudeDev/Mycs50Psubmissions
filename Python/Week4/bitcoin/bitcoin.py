@@ -1,4 +1,4 @@
-import requests as r
+import requests
 from sys import argv,exit
 if len(argv) <2:
     exit('Missing command line argument')
@@ -15,4 +15,4 @@ else:
         except requests.RequestException:
             exit('Error! Here!, Wait a minute or try again .')
         else:
-            
+
