@@ -48,7 +48,7 @@ def get_level():
 
 
 def generate_integer(level):
-    ints=[]
+    ints=[0 , 0]
     if level > 1:
         ints[0] = r(10**(level-1) , 10**(level))
         ints[1] = r(10**(level-1) , 10**(level))
