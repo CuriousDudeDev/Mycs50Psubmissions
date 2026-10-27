@@ -15,4 +15,7 @@ else:
         except requests.RequestException:
             exit('Error! Here!, Wait a minute or try again .')
         else:
+            dump = response.json()
+            price = dump['priceUsd']
+            print(f"Amount: ")
 
