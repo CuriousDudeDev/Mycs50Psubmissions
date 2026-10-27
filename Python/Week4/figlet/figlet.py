@@ -11,7 +11,7 @@ elif len(argv) > 1:
             font = argv[2]
         except IndexError:
             exit('Invalid number of arguments')
-        except FontNotFoundError:
+        except FontNotFound:
             exit('Invalid Font')
     else:
         exit(f'Invalid argument - {argv[1]}')
