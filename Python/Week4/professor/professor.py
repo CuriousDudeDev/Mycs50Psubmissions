@@ -3,33 +3,13 @@ from random import randrange as r
 
 def main():
     level = get_level()
-    print(generate_integer(level))
 
-
-def get_level():
-    while True:
-        try:
-            level = int(input('Level: '))
-        except ValueError:
-            continue
-        else:
-            if level > 3 or level <= 0:
-                continue
-            else:
-                return level
-
-
-
-def generate_integer(level):
     score = 0
     num = 0
     while num < 10 :
-        if level > 1:
-            int1 = r(10**(level-1) , 10**(level))
-            int2 = r(10**(level-1) , 10**(level))
-        else:
-            int1 = r(0 , 10**(level))
-            int2 = r(0 , 10**(level))
+        ints = generate_integer(level)
+        int1 = ints[0]
+        int2 = ints[1]
         answer = int1 + int2
         attempts = 0
         while True:
@@ -51,6 +31,31 @@ def generate_integer(level):
                 else:
                     attempts += 1
     return f'Score: {score}'
+
+
+def get_level():
+    while True:
+        try:
+            level = int(input('Level: '))
+        except ValueError:
+            continue
+        else:
+            if level > 3 or level <= 0:
+                continue
+            else:
+                return level
+
+
+
+def generate_integer(level):
+    ints=[]
+    if level > 1:
+        ints[0] = r(10**(level-1) , 10**(level))
+        ints[1] = r(10**(level-1) , 10**(level))
+    else:
+        ints[0] = r(0 , 10**(level))
+        ints[1] = r(0 , 10**(level))
+    return ints
 
 
 
