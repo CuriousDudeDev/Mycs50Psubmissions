@@ -18,5 +18,5 @@ else:
             dump = response.json()
             if 'message' in dump:
                 exit('Some Error here !')
-            price = dump['Data']['priceUsd']
-            print(f'${num*price:,.4f}')
+            price = dump['data']['priceUsd']
+            print(f'${num*float(price):,.4f}')
