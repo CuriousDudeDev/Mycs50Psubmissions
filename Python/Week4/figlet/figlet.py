@@ -7,12 +7,13 @@ if len(argv) == 1:
     font = choice(fonts)
 elif len(argv) > 1:
     if argv[1] in ['-f' , '--font']:
+        if argv[2] not in FigletFont.getFonts():
+            exit('Invalid Font')
         try:
             font = argv[2]
         except IndexError:
             exit('Invalid number of arguments')
-        except FontNotFound:
-            exit('Invalid Font')
+
     else:
         exit(f'Invalid argument - {argv[1]}')
 original = input('Input: ')
