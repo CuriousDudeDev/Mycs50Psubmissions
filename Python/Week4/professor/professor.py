@@ -21,7 +21,7 @@ def get_level():
 
 
 def generate_integer(level):
-    socre = 0
+    score = 0
     num = 0
     while num <= 10:
         int1 = r(10*level , 10*(level+1))
@@ -40,6 +40,9 @@ def generate_integer(level):
             else:
                 if answer_given == answer:
                     score += 1
+                    break
+                else:
+                    attempts += 1
 
 
 
