@@ -19,6 +19,6 @@ def test_all_alpha():
     assert is_valid('HELLO') == True
 
 def test_no_number_at_start():
-    assert is_valid('00Hell') == False
+    assert is_valid('A0Hell') == False
 
 
