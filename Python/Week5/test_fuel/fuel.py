@@ -29,9 +29,22 @@ def main():
 
 
 def convert(fraction):
+    nums = fraction.split('/')
     try:
+        num1 = int(nums[0])
+        num2 = int(nums[1])
+    except IndexError:
+        exit('Invalid expression')
+    except ValueError:
+        exit('Invalid Expression')
+    try:
+        fraction = num1/num2
+    except ZeroDivisionError:
+        exit('Division by zero is not supported')
+    else:
         
-
+        fraction = round(fraction)
+        return fraction
 
 def gauge(percentage):
     ...
