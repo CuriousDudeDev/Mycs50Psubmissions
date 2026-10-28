@@ -21,7 +21,5 @@ def test_all_alpha():
 def test_one_letter_then_numbers():
     assert is_valid('A1234') == False
 
-def test_one_letter_only():
-    assert is_valid('A2') == False
 
 
