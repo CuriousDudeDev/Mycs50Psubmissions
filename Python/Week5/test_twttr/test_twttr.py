@@ -11,3 +11,9 @@ def test_no_vowels():
 
 def test_all_vowels():
     assert shorten('aaae') == ''
+
+def test_numbers():
+    assert shorten('123go') == '123g'
+
+def test_punctuation():
+    assert shorten('Me:Boy') == 'M:By'
