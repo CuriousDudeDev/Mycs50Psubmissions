@@ -1,5 +1,5 @@
 def main():
-    plate = input()
+    plate = ''
     if is_valid(plate):
         print("Valid")
     else:
@@ -15,6 +15,9 @@ def is_valid(s):
     for i in s:
         if i.isdigit():
             total_nums += 1
+    if total_nums > 0:
+        if not s[-1].isdigit():
+            return False
     if total_nums >= 1:
         for j in range((0-total_nums) , -1):
             if not s[j].isdigit():
