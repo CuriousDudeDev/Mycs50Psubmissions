@@ -29,7 +29,8 @@ def main():
 
 
 def convert(fraction):
-    ...
+    try:
+        
 
 
 def gauge(percentage):
