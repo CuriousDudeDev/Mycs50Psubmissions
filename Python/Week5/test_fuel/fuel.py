@@ -21,7 +21,7 @@ def convert(fraction):
         if num1 > num2:
             raise ValueError
         else:
-            fraction = int(round(fraction))
+            fraction = round(fraction*100)
             return fraction
 
 def gauge(percentage):
