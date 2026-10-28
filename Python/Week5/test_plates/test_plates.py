@@ -18,7 +18,10 @@ def test_first_number():
 def test_all_alpha():
     assert is_valid('HELLO') == True
 
-def test_no_number_at_start():
-    assert is_valid('A0Hell') == False
+def test_one_letter_then_numbers():
+    assert is_valid('A1234') == False
+
+def test_one_letter_only():
+    assert is_valid('A2') == False
 
 
