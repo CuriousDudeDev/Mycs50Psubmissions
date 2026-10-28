@@ -15,4 +15,7 @@ def test_no_punctuation():
 def test_first_number():
     assert is_valid('ABC022') == False
 
+def test_all_alpha():
+    assert is_valid('HELLO') == True
+
 
