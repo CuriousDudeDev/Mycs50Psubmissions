@@ -1,5 +1,5 @@
 def main():
-    plate = input("Plate: ")
+    plate = ''
     if is_valid(plate):
         print("Valid")
     else:
