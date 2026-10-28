@@ -1,31 +1,7 @@
-while True:
-    fraction = input('Enter the fraction: ')
-    nums = fraction.split('/')
-    try:
-        num1 = int(nums[0])
-        num2 = int(nums[1])
-        num1/num2
-    except ZeroDivisionError:
-        pass
-    except ValueError:
-        pass
-    else:
-        if num1 > num2 or num1 < 0:
-            pass
-        else:
-            percent = round(num1/num2 * 100)
-            if percent <= 1:
-                print('E')
-                break
-            elif percent >= 99:
-                print('F')
-                break
-            else:
-                print(str(percent)+ '%')
-                break
-
 def main():
-    ...
+    expression = input()
+    percent = convert(expression)
+    print(gauge(percent))
 
 
 def convert(fraction):
@@ -42,12 +18,19 @@ def convert(fraction):
     except ZeroDivisionError:
         exit('Division by zero is not supported')
     else:
-        
-        fraction = round(fraction)
-        return fraction
+        if num1 > num2:
+            raise ValueError
+        else:
+            fraction = int(round(fraction))
+            return fraction
 
 def gauge(percentage):
-    ...
+    if percentage <1:
+        return 'E'
+    elif percentage > 99:
+        return 'F'
+    else:
+        return f'{percentage}%'
 
 
 if __name__ == "__main__":
