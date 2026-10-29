@@ -9,8 +9,9 @@ def main():
 def parse(s):
     before_and_after_iframe = s.split('</iframe>')
     before = before_and_after_iframe[0]
-    after = before_and_after_iframe[1]
-    
+    if 'youtube.com' not in before:
+        return None
+
 
 
 
