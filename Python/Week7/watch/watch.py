@@ -11,6 +11,8 @@ def parse(s):
     before = before_and_after_iframe[0]
     if 'youtube.com' not in before:
         return None
+    till_src = before.split(' title')[0]
+    src_link = till_src.split('src=')
 
 
 
