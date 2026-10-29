@@ -1,6 +1,11 @@
 from sys import  argv , exit
 
-def func_need()
+def func_need(x , y):
+    for i in x:
+        if y != i:
+            return False
+    return True
+
 
 if len(argv) < 2:
     exit('Too few command-line arguments')
@@ -17,6 +22,6 @@ else:
         lines = file.readlines()
         num_of_lines_true = 0
         for line in lines:
-            if not(line.startswith('#')) or (len(line)==1 and line == ' ') or :
+            if not(line.startswith('#')) or not func_need(line , ' '):
                 num_of_lines_true += 1
         print(num_of_lines_true)
