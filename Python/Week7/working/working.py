@@ -15,15 +15,16 @@ def convert(s):
         am_min = matches.group(3)
         pm_hours = matches.group(4)
         pm_min = matches.group(6)
+        if not am_min:
+            am_min = '00'
+        if not pm_min:
+            pm_min = '00'
         if int(am_min) > 60 or int(pm_min) > 60:
             raise ValueError('Invalid minutes')
         if int(am_hours) > 12 or int(pm_hours) > 12:
             raise ValueError('Invalid hours')
 
-        if not am_min:
-            am_min = '00'
-        if not pm_min:
-            pm_min = 'oo'
+
         return f"{am_hours}:{am_min} to {int(pm_hours) + 12}:{pm_min}"
 
 
