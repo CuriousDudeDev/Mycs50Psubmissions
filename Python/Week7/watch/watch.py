@@ -16,7 +16,7 @@ def parse(s):
 # Match common YouTube embed patterns:
     # - youtube.com/embed/VIDEO_ID
     # - Handles http/https, www, single/double quotes, and optional params after ID
-    pattern = r'src=["\']https?://(?:www\.)?youtube\.com/embed/([A-Za-z0-9_-]+)'
+    pattern = r'<iframe[^>]*src=["\']https?://(?:www\.)?youtube\.com/embed/([A-Za-z0-9_-]+)'
     match = re.search(pattern, s, re.IGNORECASE)
 
     if match:
