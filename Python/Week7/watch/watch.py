@@ -1,36 +1,29 @@
 import re
 import sys
 
-
 def main():
-    print(parse(input("HTML: ")) , end= '')
-
+    html = input("HTML: ")
+    result = parse(html)
+    print(result, end='')
 
 def parse(s):
-    if 'youtube' not in s:
-        return None
-    before_and_after_iframe = s.split('</iframe>')
-    before = before_and_after_iframe[0]
-    if 'youtube.com' not in before:
-        return None
-    if 'youtube.com' in before_and_after_iframe[1]:
+    """Extract YouTube video ID from an iframe embed and return youtu.be link.
+    Returns None if no valid YouTube embed is found.
+    """
+    if not s or 'youtube' not in s.lower():
         return None
 
-    till_src = before.split(' title') if 'title' in before else before.split('>')
-    till_src = till_src[0]
-    if 'youtube' not in till_src:
-        return None
-    src_link = till_src.split('src=')
-    src_link = src_link[1].strip()
-    src_link = src_link.split('embed/')
-    code = src_link[1]
-    return f"https://youtu.be/{code}"
+# Match common YouTube embed patterns:
+    # - youtube.com/embed/VIDEO_ID
+    # - Handles http/https, www, single/double quotes, and optional params after ID
+    pattern = r'src=["\']https?://(?:www\.)?youtube\.com/embed/([A-Za-z0-9_-]+)'
+    match = re.search(pattern, s, re.IGNORECASE)
 
+if match:
+        video_id = match.group(1)
+        return f"https://youtu.be/{video_id}"
 
-
-
-
-
+return None
 
 if __name__ == "__main__":
     main()
