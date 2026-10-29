@@ -1,6 +1,6 @@
 import re
 import sys
-
+import re
 
 def main():
     print(convert(input("Hours: ")))
@@ -9,7 +9,7 @@ def main():
 def convert(s):
     matches = re.search(r"(\d{1,2})(:| )?(\d{2})?AM (to|TO) (\d{1,2})(:| )?(\d{2})?PM",s)
     if not matches:
-        raise Value
+        raise ValueError('Invalid Input- Try Again')
     if matches:
         am_hours = matches.group(1)
         am_min = matches.group(3)
