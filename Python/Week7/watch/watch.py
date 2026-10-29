@@ -3,7 +3,7 @@ import sys
 
 
 def main():
-    print(parse(input("HTML: ")))
+    print(parse(input("HTML: ")) , end= '')
 
 
 def parse(s):
