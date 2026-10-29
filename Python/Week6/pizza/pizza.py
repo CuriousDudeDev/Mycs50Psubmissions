@@ -18,4 +18,10 @@ else:
         reader = csv.DictReader(file)
         headers = reader.fieldnames
         table = list(reader)
-        print(tabulate(table , headers , "colon_grid", colalign=["right", "left"]))
+        key = 1
+        new_headers = {}
+        for i in headers:
+            new_headers[key] = i
+            key += 1
+
+        print(tabulate(table , new_headers , "colon_grid", colalign=["right", "left"]))
