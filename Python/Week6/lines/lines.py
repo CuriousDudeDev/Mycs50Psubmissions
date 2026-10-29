@@ -17,4 +17,4 @@ else:
         for line in lines:
             if not(line.startswith('#') or line.startswith(' ')):
                 num_of_lines_true += 1
-        print(num_of_line_true)
+        print(num_of_lines_true)
