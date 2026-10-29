@@ -1,11 +1,4 @@
-print('Hello')
-print('Hello')
-print('Hello')
-print('Hello')
-print('Hello')
-print('Hello')
-print('Hello')
-print('Hello')
-print('Hello')
-# sdsdasdad
-     
+asdd
+asd
+asd
+
