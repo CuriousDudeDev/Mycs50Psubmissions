@@ -12,4 +12,8 @@ try:
 except FileNotFoundError:
     exit('File does not exist')
 else:
-    
+    table = []
+    with open(argv[1]) as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            table
