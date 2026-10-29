@@ -1,3 +1,4 @@
+from tabulate import tabulate
 import csv
 from sys import exit , argv
 
@@ -16,4 +17,4 @@ else:
     with open(argv[1]) as file:
         reader = csv.DictReader(file)
         for row in reader:
-            table
+            table.append({'Sicilian Pizza':row['Sicilian Pizza'] , 'Small':row['Small'] , 'Large':row['Large']})
