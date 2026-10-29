@@ -1,33 +1,30 @@
 def main():
-    expression = input()
-    percent = convert(expression)
-    print(gauge(percent))
+    while True:
+        expression = input()
+        try:
+            percent = convert(expression)
+        except ZeroDivisionError:
+            continue
+        except ValueError:
+            continue
+        else:
+            print(gauge(percent))
 
 
 def convert(fraction):
-    nums = fraction.split('/')
-    try:
-        num1 = int(nums[0])
-        num2 = int(nums[1])
-    except IndexError:
-        exit('Invalid expression')
-    except ValueError:
-        exit('Invalid Expression')
-    try:
-        fraction = num1/num2
-    except ZeroDivisionError:
-        exit('Division by zero is not supported')
-    else:
-        if num1 > num2:
-            raise ValueError
-        else:
-            fraction = round(fraction*100)
-            return fraction
+    num1 , num2 = fraction.split('/')
+    num1 = int(num1)
+    num2 = int(num2)
+    if num2 == 0:
+        raise ZeroDivisionError
+    if num2 < num1 or (num1 < 0) or (num2 < 0):
+        raise ValueError
+    return (round(100*num1/num2))
 
 def gauge(percentage):
-    if percentage <1:
+    if percentage <= 1:
         return 'E'
-    elif percentage > 99:
+    elif percentage >= 99:
         return 'F'
     else:
         return f'{percentage}%'
