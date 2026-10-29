@@ -19,4 +19,4 @@ else:
         for row in reader:
             table.append({1:row['Sicilian Pizza'] , 2:row['Small'] , 3:row['Large']})
         headers = {1:'Sicilian Pizza' , 2:'Small' , 3:'Large'}
-        print(tabulate(table , headers , "colon_grid"))
+        print(tabulate(table , headers , "colon_grid", colalign=["right", "left"]))
