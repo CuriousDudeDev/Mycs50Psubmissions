@@ -1,15 +1,5 @@
 from sys import  argv , exit
 
-def contains_only_y_in_x(x , y):
-    value = False
-    for i in x:
-        if y in i or not i:
-            value = False
-        else:
-            value = True
-            break
-    return value
-
 
 if len(argv) < 2:
     exit('Too few command-line arguments')
@@ -26,6 +16,6 @@ else:
         lines = file.readlines()
         num_of_lines_true = 0
         for line in lines:
-            if not(line.startswith('#')) or contains_only_y_in_x(line , ' '):
+            if not(line.startswith('#')) or not contains_only_y_in_x(line , ' '):
                 num_of_lines_true += 1
         print(num_of_lines_true)
