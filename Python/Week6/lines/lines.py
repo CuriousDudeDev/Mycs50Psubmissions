@@ -22,6 +22,6 @@ else:
         lines = file.readlines()
         num_of_lines_true = 0
         for line in lines:
-            if not(line.startswith('#')) or not func_need(line , ' '):
+            if line.strip() and not(line.strip().startswith('#')):
                 num_of_lines_true += 1
         print(num_of_lines_true)
