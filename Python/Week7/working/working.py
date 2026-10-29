@@ -13,8 +13,8 @@ def convert(s):
     if matches:
         am_hours = matches.group(1)
         am_min = matches.group(3)
-        pm_hours = matches.group(4)
-        pm_min = matches.group(6)
+        pm_hours = matches.group(5)
+        pm_min = matches.group(7)
         if not am_min:
             am_min = 0
         if not pm_min:
@@ -25,7 +25,7 @@ def convert(s):
             raise ValueError('Invalid hours')
 
 
-        return f"{am_hours}:{am_min} to {int(pm_hours) + 12}:{pm_min:.2f}"
+        return f"{int(am_hours):02d}:{am_min:02} to {int(pm_hours) + 12}:{pm_min:02}"
 
 
 ...
