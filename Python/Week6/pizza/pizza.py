@@ -24,4 +24,4 @@ else:
             new_headers[key] = i
             key += 1
 
-        print(tabulate(table , new_headers , "colon_grid", colalign=["right", "left"]))
+        print(tabulate(table , new_headers , tablefmt="grid"))
