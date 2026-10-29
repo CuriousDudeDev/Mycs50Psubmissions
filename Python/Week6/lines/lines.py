@@ -1,15 +1,20 @@
-import sys
+from sys import  argv , exit
 
 if len(argv) < 2:
-    sys.exit('Too few command-line arguments')
+    exit('Too few command-line arguments')
 if len(argv) > 2:
-    sys.exit('Too many command-line arguments')
-if len(argv) == 2 and not (argv.endswith('.py')):
-    sys.exit('Not a Python file')
+    exit('Too many command-line arguments')
+if len(argv) == 2 and not (argv[1].endswith('.py')):
+    exit('Not a Python file')
 else:
     try:
         file = open(argv[1] , 'r')
     except FileNotFoundError:
-        sys.exit('File does not exist')
+        exit('File does not exist')
     else:
-        
+        lines = file.readlines()
+        num_of_lines_true = 0
+        for line in lines:
+            if not(line.startswith('#') or line.startswith(' ')):
+                num_of_lines_true += 1
+        print(num_of_line_true)
