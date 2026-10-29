@@ -7,7 +7,7 @@ def main():
 
 
 def convert(s):
-    ...
+    matches = re.search(r"(\d+)?:(\d+)?AM to (\d+)?:(?\d+)PM",s)
 
 
 ...
