@@ -17,6 +17,6 @@ else:
     with open(argv[1]) as file:
         reader = csv.DictReader(file)
         for row in reader:
-            table.append({1:row['Sicilian Pizza'] , 2:row['Small'] , 3:row['Large']})
+            table.append({1:row[1] , 2:row[1] , 3:row[1]})
         headers = {1:'Sicilian Pizza' , 2:'Small' , 3:'Large'}
         print(tabulate(table , headers , "colon_grid", colalign=["right", "left"]))
