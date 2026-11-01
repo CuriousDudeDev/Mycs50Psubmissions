@@ -23,6 +23,11 @@ def convert(s):
             raise ValueError('Invalid minutes')
         if int(am_hours) > 12 or int(pm_hours) > 12:
             raise ValueError('Invalid hours')
+        if int(pm_hours) == 12:
+            int(pm_hours) -= 12
+        if int(am_hours) == 0:
+            int(am_hours) -= 12
+
 
 
         return f"{int(am_hours):02d}:{am_min:02} to {int(pm_hours) + 12}:{pm_min:02}"
