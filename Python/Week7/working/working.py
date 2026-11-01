@@ -14,6 +14,16 @@ def convert(s):
         hours_2 = pattern.group(6)
         minutes_1 = pattern.group(3)
         minutes_2 = pattern.group(8)
+        time_1 = pattern.group(5)
+        time_2 = pattern.group(10)
+        if time_1 == time_2:
+            riase ValueError(Invalid Input)
+        if time_1 == 'AM':
+            am_hours == int(time_1)
+            pm_hours == int(time_2)
+        else:
+            pm_hours = int(time_1)
+            am_hours = int(time_1)
         
 
         else:
