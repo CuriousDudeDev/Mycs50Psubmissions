@@ -28,8 +28,9 @@ def convert(s):
             minutes_1 = 0
         if not minutes_2:
             minutes_2 = 0
-        if minutes-1 > 60 or minutes_2 > 60:
+        if minutes_1 > 60 or minutes_2 > 60:
             raise ValueError('Invalid Input')
+        
 
         else:
             raise ValueError('Invalid Input')
