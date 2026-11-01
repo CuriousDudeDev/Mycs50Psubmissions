@@ -7,7 +7,7 @@ def main():
 
 
 def convert(s):
-    matches = re.search(r"(\d{1,2})(:| )?(\d{2})?AM (to|TO) (\d{1,2})(:| )?(\d{2})? PM",s)
+    matches = re.search(r"(\d{1||2})(:| )?(\d{2})?AM (to|TO) (\d{1,2})(:| )?(\d{2})? PM",s)
     if not matches:
         raise ValueError('Invalid Input- Try Again')
     if matches:
@@ -26,7 +26,7 @@ def convert(s):
         if int(pm_hours) == 12:
             pm_hours = int(pm_hours)
             pm_hours -= 12
-        
+
 
 
 
