@@ -16,9 +16,24 @@ def convert(s):
         minutes_2 = pattern.group(8)
         time_1 = pattern.group(5)
         time_2 = pattern.group(10)
-        if time_1 == time_2:
-            raise ValueError('Invalid Input')
-        if hours_1 <=12 and time_1 == 'AM'
+        if hours_1 <=12 and time_1 == 'AM':
+            hours_1 = int(hours_1)
+        elif hours_1 >= 12 and time_1 == 'AM':
+            raise ValueError
+        elif hours_1 <=12 and time_1 == 'PM':
+            hours_1 = int(hours_1) + 12
+        elif hours_1 >=12 and time_1 == 'PM':
+            raise ValueError
+        #end of hour_1
+        if hours_2 <=12 and time_2 == 'AM':
+            hours_2 = int(hours_2)
+        elif hours_2 >= 12 and time_2 == 'AM':
+            raise ValueError
+        elif hours_2 <=12 and time_2 == 'PM':
+            hours_2 = int(hours_2) + 12
+        elif hours_2 >=12 and time_2 == 'PM':
+            raise ValueError
+
         if not minutes_1:
             minutes_1 = 0
         if not minutes_2:
