@@ -40,10 +40,12 @@ def convert(s):
             minutes_2 = 0
         if minutes_1 > 60 or minutes_2 > 60 or minutes_1 < 0 or minutes_2 < 0:
             raise ValueError('Invalid Input')
+        minutes_1 = int(minutes_1)
+        minutes_2 = int(minutes_2)
 
 
         #end of minutes
-        return print(f"{hours_1}")
+        return print(f"{hours_1}:{minutes_1:.02}")
     else:
         raise ValueError('Invalid Input')
 
