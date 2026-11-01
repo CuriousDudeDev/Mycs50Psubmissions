@@ -15,6 +15,7 @@ def convert(s):
         minutes_1 = pattern.group(3)
         minutes_2 = pattern.group(8)
         
+
         else:
         raise ValueError('Invalid Input')
 
