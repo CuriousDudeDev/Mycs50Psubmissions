@@ -18,19 +18,14 @@ def convert(s):
         time_2 = pattern.group(10)
         if time_1 == time_2:
             raise ValueError('Invalid Input')
-        if time_1 == 'AM':
-            am_hours == int(time_1)
-            pm_hours == int(time_2)
-        else:
-            pm_hours = int(time_1)
-            am_hours = int(time_1)
+        if hours_1 <=12 and time_1 == 'AM'
         if not minutes_1:
             minutes_1 = 0
         if not minutes_2:
             minutes_2 = 0
         if minutes_1 > 60 or minutes_2 > 60:
             raise ValueError('Invalid Input')
-        
+
 
         else:
             raise ValueError('Invalid Input')
