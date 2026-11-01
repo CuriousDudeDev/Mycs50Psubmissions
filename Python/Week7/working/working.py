@@ -8,7 +8,7 @@ def main():
 
 def convert(s):
     s = s.strip()
-    pattern = re.search(r"",s)
+    pattern = re.search(r"\d{}",s)
 
 
 ...
