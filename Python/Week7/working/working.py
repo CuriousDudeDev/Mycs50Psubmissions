@@ -8,7 +8,11 @@ def main():
 
 def convert(s):
     s = s.strip()
-    pattern = re.search(r"\d{}",s)
+    pattern = re.search(r"(\d{1,2})(:| )?(/d{2})?(| )AM to (\d{1,2})(:| )?(/d{2})?(| )PM)",s)
+    if pattern:
+        return True
+    else:
+        return False
 
 
 ...
