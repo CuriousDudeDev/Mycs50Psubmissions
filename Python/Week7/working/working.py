@@ -18,32 +18,34 @@ def convert(s):
         time_2 = pattern.group(10)
         if hours_1 <=12 and time_1 == 'AM':
             hours_1 = int(hours_1)
-        elif hours_1 >= 12 and time_1 == 'AM':
+        elif hours_1 > 12 and time_1 == 'AM':
             raise ValueError
         elif hours_1 <=12 and time_1 == 'PM':
             hours_1 = int(hours_1) + 12
-        elif hours_1 >=12 and time_1 == 'PM':
+        elif hours_1 >12 and time_1 == 'PM':
             raise ValueError
         #end of hour_1
         if hours_2 <=12 and time_2 == 'AM':
             hours_2 = int(hours_2)
-        elif hours_2 >= 12 and time_2 == 'AM':
+        elif hours_2 > 12 and time_2 == 'AM':
             raise ValueError
         elif hours_2 <=12 and time_2 == 'PM':
             hours_2 = int(hours_2) + 12
-        elif hours_2 >=12 and time_2 == 'PM':
+        elif hours_2 >12 and time_2 == 'PM':
             raise ValueError
-
+        # 3end of hour_2
         if not minutes_1:
             minutes_1 = 0
         if not minutes_2:
             minutes_2 = 0
-        if minutes_1 > 60 or minutes_2 > 60:
+        if minutes_1 > 60 or minutes_2 > 60 or minutes_1 < 0 or minutes_2 < 0:
             raise ValueError('Invalid Input')
 
 
-        else:
-            raise ValueError('Invalid Input')
+        #end of minutes
+        return print(f"{hours_1}")
+    else:
+        raise ValueError('Invalid Input')
 
 
 ...
