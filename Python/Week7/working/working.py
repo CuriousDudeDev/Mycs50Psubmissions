@@ -26,9 +26,7 @@ def convert(s):
         if int(pm_hours) == 12:
             pm_hours = int(pm_hours)
             pm_hours -= 12
-        if int(am_hours) == 0:
-            am_hours = int(am_hours)
-            am_hours -= 12
+        
 
 
 
