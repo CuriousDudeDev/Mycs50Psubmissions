@@ -28,7 +28,4 @@ class Jar:
     def size(self):
         return self._n
 
-jar = Jar()
-jar.deposit(3)
-jar.deposit(12)
-print(jar)
+
