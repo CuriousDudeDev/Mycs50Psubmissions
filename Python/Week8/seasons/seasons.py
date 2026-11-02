@@ -37,7 +37,7 @@ class song:
             raise ValueError('Invalid')
         between_days = days_to_today - days_to_birthday
         minutes = between_days * 24 * 60
-        minutes_in_words = p.number_to_words(minutes).replace(' and ' , ' , ').capitalize()
+        minutes_in_words = p.number_to_words(minutes).replace(' and ' , ' ').capitalize()
         return f"{minutes_in_words} minutes"
 
 
