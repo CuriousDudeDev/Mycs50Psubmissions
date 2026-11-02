@@ -4,8 +4,9 @@ class Jar:
             raise ValueError('Invalid')
         self.capacity = capacity
 
-    def __str__(self):
-        
+    def __str__(self , n):
+        return n*''
+
 
     def deposit(self, n):
         ...
