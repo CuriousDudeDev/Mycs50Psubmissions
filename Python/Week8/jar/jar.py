@@ -9,7 +9,7 @@ class Jar:
 
     def deposit(self, n):
 
-        if n > Jar().__init__():
+        if n > self.n:
             raise ValueError
         else:
             self.n = n
