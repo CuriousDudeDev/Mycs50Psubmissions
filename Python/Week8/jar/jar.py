@@ -3,6 +3,7 @@ class Jar:
         if not capacity >=0:
             raise ValueError('Invalid')
         self.capacity = capacity
+        self.n = 0
 
     def __str__(self):
         return self.n*'🍪'
