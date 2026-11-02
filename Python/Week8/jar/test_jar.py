@@ -2,8 +2,8 @@ from jar import Jar
 
 
 def test_init():
-    jar = Jar()
-    assert jar == '\n'
+    jar = Jar(13)
+    assert jar.capacity == 13
 
 
 def test_str():
@@ -26,3 +26,6 @@ def test_withdraw():
     jar.deposit(4)
     jar.withdraw(2)
     assert jar.size == 2
+
+def test_invalid_1():
+    
