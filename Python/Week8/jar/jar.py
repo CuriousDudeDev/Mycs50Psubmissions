@@ -9,7 +9,7 @@ class Jar:
         return self._n*'🍪'
 
     def deposit(self, n):
-        if n > self._capacity:
+        if self._n + n > self._capacity:
             raise ValueError
         else:
             self._n += n
