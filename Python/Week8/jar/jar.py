@@ -4,15 +4,18 @@ class Jar:
             raise ValueError('Invalid')
         self.capacity = capacity
 
-    def __str__(self , n=0):
-        return n*'🍪'
-
+    def __str__(self):
+        return self.n*'🍪'
 
     def deposit(self, n):
-        ...
+
+        if n > Jar().__init__():
+            raise ValueError
+        else:
+            self.n = n
 
     def withdraw(self, n):
-        ...
+        if n > 
 
     @property
     def capacity(self):
