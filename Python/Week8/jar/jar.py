@@ -18,14 +18,10 @@ class Jar:
         else:
             self.n = self.n - n
 
+    @property
     def capacity(self):
-        return self.capacity
+        ...
 
+    @property
     def size(self):
-        return self.n
-
-jar = Jar()
-jar.deposit(10)
-jar.withdraw(7)
-print(jar.__str__())
-print(jar.capacity())
+        ...
