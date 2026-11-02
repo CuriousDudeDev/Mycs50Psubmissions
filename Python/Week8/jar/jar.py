@@ -17,6 +17,15 @@ class Jar:
             raise ValueError
         else:
             self.n = self.n - n
-            
-Jar().deposit(2)
-print(Jar().__str__())
+
+    def capacity(self):
+        return self.capacity
+
+    def size(self):
+        return self.n
+
+jar = Jar()
+jar.deposit(10)
+jar.withdraw(7)
+print(jar.__str__())
+print(jar.capacity())
