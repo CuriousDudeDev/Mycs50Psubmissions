@@ -20,8 +20,9 @@ class Jar:
 
     @property
     def capacity(self):
-        ...
+        return self.capacity
 
     @property
     def size(self):
-        ...
+        self.size = self.n
+        return self.size
