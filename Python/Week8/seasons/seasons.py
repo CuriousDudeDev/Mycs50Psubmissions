@@ -2,15 +2,16 @@ from datetime import date
 import re
 import sys
 import inflect
-
 p = inflect.engine()
 
 def main():
-    given = input('Enter your birth date: ')
+    print(final(input('Enter you birthday: ')))
+
+def final(given):
     pattern = re.search(r'(\d{4})-(\d{2})-(\d{2})' , given)
     if pattern:
         var1 = song(given , date.today().strftime("%Y-%m-%d"))
-        print(var1.convert())
+        return (var1.convert())
     else:
         sys.exit('Invalid Date')
 
