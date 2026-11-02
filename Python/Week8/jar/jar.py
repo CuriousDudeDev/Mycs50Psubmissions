@@ -28,3 +28,5 @@ class Jar:
     @property
     def size(self):
         return self.n
+
+Jar().__str__()
