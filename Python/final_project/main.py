@@ -3,7 +3,8 @@ import requests
 import sys
 def main():
     print(summary())
-    get_user_option()
+    option = get_user_option()
+    return option_handling(option)
 
 def option_handling(option):
     if option == 1:
