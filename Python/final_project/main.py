@@ -1,6 +1,6 @@
 import re
 import requests
-
+import sys
 def main():
     print(summary())
     get_user_option()
@@ -20,8 +20,10 @@ def option_handling(option):
         return get_github_id(get_username())
     elif option == 7:
         return get_avatar_url(get_username())
-    elif option == 9:
+    elif option == 8:
         return get_life_info(get_username())
+    else:
+        sys.exit('Exitting!!!!')
 
 
 
@@ -39,7 +41,7 @@ def get_user_option():
         except ValueError:
             continue
         else:
-            if not 1<=option<=10:
+            if not 1<=option<=9:
                 continue
             return option
 
@@ -68,7 +70,7 @@ def check_username_using_official_api(username):
 
 def summary():
     return("""This is a tool made in python, that mainly uses github's official api to give useful information to the user"
-    You can use this to-\n1.Search for username availability\n2.Check whether a username is valid using regex\n3.Get the api url for the user's api request to DIY\n4.Get the Url of the user's profile\n5.Get the number of public repos\n6.Get the Github ID\n7.Get the avatar url of the user\n8.Get a detailed summary of the user\n9.Get the real life details of the person if any available\n10.exit"""")
+    You can use this to-\n1.Search for username availability\n2.Check whether a username is valid using regex\n3.Get the api url for the user's api request to DIY\n4.Get the Url of the user's profile\n5.Get the number of public repos\n6.Get the Github ID\n7.Get the avatar url of the user\n8.Get the real life details of the person if any available\n9.exit"""")
 
 def get_the_api_url(username):
     return f"https://api.github.com/users/{username}"
@@ -126,14 +128,15 @@ get_life_info(username):
     response = requests.get(url)
     if response.status_code == 200:
         data = response.json()
-        name = data['name'] if not null else False
-        email = data['email']if not null else False
-        blog = data['blog']if not null else False
-        company = data['company']if not null else False
-        twitter = data['twitter_username']if not null else False
-        details
-
-
+        name = data['name']
+        email = data['email']
+        blog = data['blog']
+        company = data['company']
+        twitter = data['twitter_username']
+        details = [data , name , email, blog , company , twitter]
+        text = ''
+        text += f'Name: {name}\nEmail: {email}\nblog: {blog}\n company: {company}\ntwitter: {twitter}'
+        return f"This is the entire availavle information. A none value indicates lack of information\n{text}"
     elif response.status_code == 404:
         return "There is no user named {username} - Verified via github's api"
     else:
