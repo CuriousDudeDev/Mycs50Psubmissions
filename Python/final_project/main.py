@@ -65,7 +65,7 @@ def check_username_using_official_api(username):
         else:
             return f"Perhaps, you migth have meant a user named {login}. The user has been found - Verified via Github's api"
     elif response.status_code == 404:
-        return "There is no user named {username} - Verified via github's api"
+        return f"There is no user named {username} - Verified via github's api"
     else:
         return f"API request failed with status code {response.status_code}"
 
@@ -84,7 +84,7 @@ def get_the_url_of_users_profile(username):
         profile = data['html_url']
         return profile
     elif response.status_code == 404:
-        return "There is no user named {username} - Verified via github's api"
+        return f"There is no user named {username} - Verified via github's api"
     else:
         return f"API request failed with status code {response.status_code}. Try Again"
 
@@ -96,7 +96,7 @@ def get_num_of_public_repos(username):
         num = data['public_repos']
         return num
     elif response.status_code == 404:
-        return "There is no user named {username} - Verified via github's api"
+        return f"There is no user named {username} - Verified via github's api"
     else:
         return f"API request failed with status code {response.status_code}. Try Again"
 
@@ -108,7 +108,7 @@ def get_github_id(username):
         id = data['id']
         return id
     elif response.status_code == 404:
-        return "There is no user named {username} - Verified via github's api"
+        return f"There is no user named {username} - Verified via github's api"
     else:
         return f"API request failed with status code {response.status_code}. Try Again"
 
@@ -120,7 +120,7 @@ def get_avatar_url(username):
         avatar = data['avatar_url']
         return avatar
     elif response.status_code == 404:
-        return "There is no user named {username} - Verified via github's api"
+        return f"There is no user named {username} - Verified via github's api"
     else:
         return f"API request failed with status code {response.status_code}. Try Again"
 
@@ -139,7 +139,7 @@ def get_life_info(username):
         text += f'Name: {name}\nEmail: {email}\nblog: {blog}\n company: {company}\ntwitter: {twitter}'
         return f"This is the entire availavle information. A none value indicates lack of information\n{text}"
     elif response.status_code == 404:
-        return "There is no user named {username} - Verified via github's api"
+        return f"There is no user named {username} - Verified via github's api"
     else:
         return f"API request failed with status code {response.status_code}. Try Again"
 main()
