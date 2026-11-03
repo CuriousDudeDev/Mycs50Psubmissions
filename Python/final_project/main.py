@@ -105,8 +105,8 @@ def get_github_id(username):
     response = requests.get(url)
     if response.status_code == 200:
         data = response.json()
-        id = data['id']
-        return id
+        githubid = data['id']
+        return githubid
     elif response.status_code == 404:
         return f"There is no user named {username} - Verified via github's api"
     else:
@@ -134,7 +134,6 @@ def get_life_info(username):
         blog = data['blog']
         company = data['company']
         twitter = data['twitter_username']
-        details = [data , name , email, blog , company , twitter]
         text = ''
         text += f'Name: {name}\nEmail: {email}\nblog: {blog}\n company: {company}\ntwitter: {twitter}'
         return f"This is the entire availavle information. A none value indicates lack of information\n{text}"
