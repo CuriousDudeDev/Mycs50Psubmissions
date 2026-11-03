@@ -21,7 +21,7 @@ def option_handling(option):
     elif option == 7:
         return get_avatar_url(get_username())
     elif option == 9:
-        return get_life_info(get_username()):
+        return get_life_info(get_username())
 
 
 
@@ -126,7 +126,12 @@ get_life_info(username):
     response = requests.get(url)
     if response.status_code == 200:
         data = response.json()
-        
+        name = data['name']
+        email = data['email']
+        blog = data['blog']
+        company = data['company']
+        twitter = 
+
 
     elif response.status_code == 404:
         return "There is no user named {username} - Verified via github's api"
