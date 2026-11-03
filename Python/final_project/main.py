@@ -4,7 +4,7 @@ import sys
 def main():
     print(summary())
     option = get_user_option()
-    return option_handling(option)
+    print( option_handling(option))
 
 def option_handling(option):
     if option == 1:
