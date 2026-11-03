@@ -18,6 +18,11 @@ def option_handling(option):
         return get_num_of_public_repos(get_username())
     elif option == 6:
         return get_github_id(get_username())
+    elif option == 7:
+        return get_avatar_url(get_username())
+    elif option == 9:
+        return get_life_info(get_username()):
+
 
 
 
@@ -104,3 +109,26 @@ def get_github_id(username):
     else:
         return f"API request failed with status code {response.status_code}. Try Again"
 
+get_avatar_url(username):
+    url = get_the_api_url(username)
+    response = requests.get(url)
+    if response.status_code == 200:
+        data = response.json()
+        avatar = data['avatar_url']
+        return avatar
+    elif response.status_code == 404:
+        return "There is no user named {username} - Verified via github's api"
+    else:
+        return f"API request failed with status code {response.status_code}. Try Again"
+
+get_life_info(username):
+    url = get_the_api_url(username)
+    response = requests.get(url)
+    if response.status_code == 200:
+        data = response.json()
+        
+
+    elif response.status_code == 404:
+        return "There is no user named {username} - Verified via github's api"
+    else:
+        return f"API request failed with status code {response.status_code}. Try Again"
