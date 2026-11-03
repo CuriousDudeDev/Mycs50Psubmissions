@@ -126,11 +126,12 @@ get_life_info(username):
     response = requests.get(url)
     if response.status_code == 200:
         data = response.json()
-        name = data['name']
-        email = data['email']
-        blog = data['blog']
-        company = data['company']
-        twitter = 
+        name = data['name'] if not null else False
+        email = data['email']if not null else False
+        blog = data['blog']if not null else False
+        company = data['company']if not null else False
+        twitter = data['twitter_username']if not null else False
+        details
 
 
     elif response.status_code == 404:
