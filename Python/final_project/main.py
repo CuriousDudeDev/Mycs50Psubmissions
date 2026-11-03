@@ -141,3 +141,4 @@ def get_life_info(username):
         return "There is no user named {username} - Verified via github's api"
     else:
         return f"API request failed with status code {response.status_code}. Try Again"
+main()
