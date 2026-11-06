@@ -7,4 +7,5 @@ def test_get_github_id():
     assert get_github_id('CuriousDudeDev') == 340907789
 
 def test_get_avatar()
-    assert get_avatar_url('CuriousDude') == 
+    assert get_avatar_url('CuriousDude') ==
+F
