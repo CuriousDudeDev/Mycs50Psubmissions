@@ -8,3 +8,6 @@ def test_get_github_id():
 
 def test_get_avatar():
     assert get_avatar_url('CuriousDudeDev') == 'https://avatars.githubusercontent.com/u/340907789?v=4'
+
+
+#else not required cause basically the logic is nice and the api is working fine af
