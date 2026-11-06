@@ -1,1 +1,2 @@
-hyperlink
+requests
+regex
