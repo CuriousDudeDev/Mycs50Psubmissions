@@ -6,4 +6,5 @@ def test_get_public_repos():
 def test_get_github_id():
     assert get_github_id('CuriousDudeDev') == 340907789
 
-def test
+def test_get_avatar()
+    assert get_avatar_url('CuriousDude') == 
